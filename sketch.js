@@ -6,7 +6,7 @@ var Engine = Matter.Engine,
 var particles = [];
 var plinkos = [];
 var divisions = [];
-var particle;
+
 
 var divisionHeight = 300;
 var score = 0;
@@ -36,43 +36,7 @@ function setup() {
   }
 }
 
-function Add(particleInput) {
-  if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >0 && particleInput.position.x < 80 ) { 
-    score = score + 300;
-    particleInput = null;
-  }
-  else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >80 && particleInput.position.x < 160) {
-    score = score + 100;
-    particleInput = null;
- }
-  else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >160 && particleInput.position.x < 240) {
-    score = score + 50;
-    particleInput = null;
-   }
-  else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >240 && particleInput.position.x < 320) {
-    score = score + 500;
-    particleInput = null; 
-  }
-  else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >320 && particleInput.position.x < 400) {
-    score = score + 20;
-    particleInput = null;
-  } else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >400 && particleInput.position.x < 480) {
-    score = score + 0;
-    particleInput = null;
-  } else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >480 && particleInput.position.x < 560) {
-    score = score + 30;
-    particleInput = null;
-  } else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >560 && particleInput.position.x < 640) {
-    score = score + 0;
-    particleInput = null;
-  } else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >640 && particleInput.position.x < 720) {
-    score = score + 60;
-    particleInput = null;
-  } else if (particleInput.position.y > 500 && particleInput.position.y < 504 && particleInput.position.x >720 && particleInput.position.x < 800) {
-    score = score + 1000;
-    particleInput = null;
-  }
-}
+
 
 function draw() {
   background("black");
@@ -100,7 +64,7 @@ var x = 40;
   }
   for (var j = 0; j < particles.length; j++) {
     particles[j].display();
-    Add(particles[j]);
+   // Add(particles[j]);
     // console.log(particles[j].x);
   }
   for (var k = 0; k < divisions.length; k++) {
